@@ -23,6 +23,10 @@ type Opts struct {
 	NoFields bool
 }
 
+func Rank(r int) Opts {
+	return Opts{Rank: r}
+}
+
 var ErrNotStruct = errors.New("not a struct type")
 
 var maxdepth = 5 // maximum level of nesting flattened structs
